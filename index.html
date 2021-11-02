@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body style="font-family: 'Nunito', sans-serif">
+    <header>
+      <nav class="d-flex justify-content-between p-3">
+        <img
+          style="width: 120px"
+          src="https://w1.pngwing.com/pngs/262/511/png-transparent-congress-logo-united-states-capitol-united-states-capitol-dome-united-states-congress-building-washington-dc-united-states-of-america-landmark.png"
+          alt="..."
+        />
+        <div class="fs-4 d-flex align-items-center">
+          <i class="far fa-envelope me-2"></i>
+          <a href="mailto:store@propublica.org">store@propublica.org</a>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Home</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Congress 113
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="house.html">House</a></li>
+                  <li>
+                    <a class="dropdown-item" href="senate.html">Senate</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="d-flex mt-3">
+      <div class="w-50 p-3">
+        <h1 class="p-1">ProPublica Congress API</h1>
+        <span class="fs-4 fw-bolder"
+          >The Congress API returns the following types of data:</span
+        >
+        <p>
+          <span class="fs-5 fw-bolder">Roll-call vote data:</span> Only
+          roll-call votes (not voice votes or division votes) are tracked by
+          official Congressional data sources. Along with basic vote data, the
+          ProPublica API returns additional information that is less readily
+          available, such as party totals. Votes are available from 1991 for the
+          House of Representatives and from 1989 for the Senate.
+        </p>
+        <p>
+          <span class="fs-5 fw-bolder">Member data:</span> Along with general
+          biographical information for current and past members of Congress, the
+          API returns data about members’ Congressional roles. Role data
+          includes the Congress number and chamber, as well as the member’s
+          title, state and party. A single member may have more than one role in
+          a particular Congress (for example, the member may switch parties or
+          move from the House to the Senate). The API also helps you compare
+          member data, including vote positions and bill cosponsorships. Member
+          data is available for every member who has served in Congress, but
+          those who have served more recently (since 1995) have more
+          information.
+        </p>
+        <p>
+          <span class="fs-5 fw-bolder">Personal explanations:</span> Statements
+          inserted into the Congressional Record explaining why lawmakers missed
+          votes and what their votes would have been (the statements are merely
+          explanations and have no effect on the vote itself).
+        </p>
+        <p>
+          <span class="fs-5 fw-bolder">Bill data:</span> Along with standard
+          bill summaries and details, the API returns bill subjects, amendments
+          and related bills. You can also retrieve bills by member, view all the
+          cosponsors of a bill, and search for bill subjects. Bill information
+          is available for bills from 1995 onward. Full-text search of bills is
+          also available.
+        </p>
+        <p>
+          <span class="fs-5 fw-bolder">Nomination data:</span> The API returns
+          presidential civilian nomination lists and details. Military
+          nominations are not included. For general information about
+          presidential nominations, see Congress.gov. Nomination data is
+          available from 2001 onward.
+        </p>
+        <p>
+          <span class="fs-5 fw-bolder">Floor actions:</span> Descriptions of
+          legislative activity that are updated in near real-time throughout the
+          day. This endpoint exists for both the House and the Senate.
+        </p>
+        <p>
+          <span class="fs-5 fw-bolder">Committee data:</span> The API returns
+          data about House and Senate committees, along with the memberships of
+          those committees.
+        </p>
+        <p>
+          <span class="fs-5 fw-bolder">Other data:</span> The API returns
+          various supplemental information, including party counts by state; and
+          committees and committee rosters.
+        </p>
+        <p>
+          Most of the data in the ProPublica Congress API is updated daily,
+          while votes are updated every 30 minutes.
+        </p>
+      </div>
+      <div class="d-flex flex-column justify-content-center w-50 p-3">
+        <img
+          src="https://www.telam.com.ar/advf/imagenes/2020/01/5e1ee9b7af2ca_1004x566.jpg"
+          class="img-thumbnail rounded float-end"
+          alt="..."
+        />
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-primary">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2021 Data insight Group | All rights Reserved
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- JS BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

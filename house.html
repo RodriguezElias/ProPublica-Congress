@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body style="font-family: 'Nunito', sans-serif;">
+    <header>
+      <nav class="d-flex justify-content-between p-3">
+        <img
+          style="width: 120px"
+          src="https://w1.pngwing.com/pngs/262/511/png-transparent-congress-logo-united-states-capitol-united-states-capitol-dome-united-states-congress-building-washington-dc-united-states-of-america-landmark.png"
+          alt="..."
+        />
+        <div class="fs-4 d-flex align-items-center">
+          <i class="far fa-envelope me-2"></i>
+          <a href="mailto:store@propublica.org">store@propublica.org</a>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Home</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Congress 113
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="house.html">House</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="senate.html">Senate</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="mt-3">
+      <div class="d-flex">
+        <div class="w-50 p-3">
+          <h1 class="p-1">Congressmen</h1>
+          <p class="fs-4">
+            The major power of the House is to pass federal legislation that
+            affects the entire country, although its bills must also be passed
+            by the Senate and further agreed to by the U.S. President before
+            becoming law (unless both the House and Senate re-pass the
+            legislation with a two-thirds majority in each chamber). The House
+            has some exclusive powers: the power to initiate revenue bills, to
+            impeach officials (impeached officials are subsequently tried in the
+            Senate), and to elect the U.S. President in case there is no
+            majority in the Electoral College. Each U.S. state is represented in
+            the House in proportion to its population as measured in the census,
+            but every state is entitled to at least one representative.
+          </p>
+        </div>
+        <div class="p-2 w-50">
+          <img
+            src="http://c.files.bbci.co.uk/4929/production/_107892781_055323674.jpg"
+            class="img-thumbnail rounded float-end"
+            alt="..."
+          />
+        </div>
+      </div>
+      <div class="container-table-house container">
+        <table class="table table-dark table-hover table-sm mb-0">
+          <thead>
+            <tr>
+              <th scope="col" class="col-md-2">Name</th>
+              <th scope="col" class="col-md-1">
+                <select
+                  class="form-select form-select-sm form-party"
+                  aria-label=".form-select-sm "
+                >
+                  <option selected value="All">Party</option>
+                  <option value="D">D</option>
+                  <option value="R">R</option>
+                  <option value="I">I</option>
+                </select>
+              </th>
+              <th scope="col" class="col-1">
+                <select
+                  class="form-select form-select-sm form-state"
+                  aria-label=".form-select-sm "
+                >
+                  <option selected value="All">State</option>
+                  <option value="AL">AL</option>
+                  <option value="AK">AK</option>
+                  <option value="AZ">AZ</option>
+                  <option value="AR">AR</option>
+                  <option value="CA">CA</option>
+                  <option value="NC">NC</option>
+                  <option value="SC">SC</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="ND">ND</option>
+                  <option value="SD">SD</option>
+                  <option value="DE">DE</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="IA">IA</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="ME">ME</option>
+                  <option value="MD">MD</option>
+                  <option value="MA">MA</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MS">MS</option>
+                  <option value="MO">MO</option>
+                  <option value="MT">MT</option>
+                  <option value="NE">NE</option>
+                  <option value="NV">NV</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NY">NY</option>
+                  <option value="NH">NH</option>
+                  <option value="NM">NM</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="RI">RI</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VT">VT</option>
+                  <option value="VA">VA</option>
+                  <option value="WV">WV</option>
+                  <option value="WA">WA</option>
+                  <option value="WI">WI</option>
+                  <option value="WY">WY</option>
+                </select>
+              </th>
+              <th scope="col" class="col-md-2">Years in office</th>
+              <th scope="col" class="col-md-2">% Votes W/Party</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-primary">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2021 Data insight Group | All rights Reserved
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- JS BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/house.js"></script>
+  </body>
+</html>
