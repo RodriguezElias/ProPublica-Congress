@@ -1,6 +1,6 @@
-let Data;
+let Data = data.results[0].members;
 document.addEventListener("DOMContentLoaded", () => {
-  fetchData();
+  printData(Data);
 });
 let optionParty = document.querySelector(".form-party");
 optionParty.addEventListener("change", () => {
@@ -11,17 +11,7 @@ optionState.addEventListener("change", () => {
   orderState(Data);
 });
 
-const fetchData = async () => {
-  try {
-    const res = await fetch("data/houseCongressData.json");
-    const data = await res.json();
-    Data = data.results[0].members;
-    console.log(Data);
-    printData(Data);
-  } catch (error) {
-    console.log(error);
-  }
-};
+
 const printData = (data) => {
   let containerTable = document.querySelector("#tbody");
   containerTable.innerHTML = "";
@@ -30,7 +20,8 @@ const printData = (data) => {
     let tdName = document.createElement("td");
     let tdNameLink = document.createElement("a");
     tdNameLink.setAttribute("href", element.url);
-    tdNameLink.textContent = `${element.first_name}`;
+    tdNameLink.setAttribute("target", "_blank");
+    tdNameLink.textContent = `${element.last_name}, ${element.first_name}`;
     tdName.appendChild(tdNameLink);
     let tdParty = document.createElement("td");
     tdParty.textContent = `${element.party}`;
@@ -69,3 +60,14 @@ const orderState = (data) =>{
     printData(result);
   }
 }
+const votedWithParty = (data, partys) => {
+  let count = 0
+  let result = data.filter((e) => e.party == partys);
+  result.forEach((el) => {
+    count += el.votes_with_party_pct / result.lenght
+  });
+  return count
+};
+
+let prueba = votedWithParty(Data, "D")
+console.log( prueba)

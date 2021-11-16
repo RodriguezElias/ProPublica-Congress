@@ -27,7 +27,7 @@
 
     <title>ProPublica-Congress</title>
   </head>
-  <body style="font-family: 'Nunito', sans-serif;">
+  <body style="font-family: 'Nunito', sans-serif">
     <header>
       <nav class="d-flex justify-content-between p-3">
         <img
@@ -68,11 +68,33 @@
                   Congress 113
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="house.html">House</a>
-                  </li>
+                  <li><a class="dropdown-item" href="house.html">House</a></li>
                   <li>
                     <a class="dropdown-item" href="senate.html">Senate</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Attendance
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="attendanceHouse.html"
+                      >House</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="attendancesenate.html"
+                      >Senate</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -204,6 +226,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/house.js"></script>
+    <script src="./data/houseCongressData.js"></script>
+    <script src="./js/tabRepresentatives.js"></script>
   </body>
 </html>

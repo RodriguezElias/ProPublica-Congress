@@ -106,97 +106,95 @@
         </div>
       </nav>
     </header>
-    <main class="d-flex mt-3">
-      <div class="w-50 p-3">
-        <h1 class="p-1">ProPublica Congress API</h1>
-        <span class="fs-4 fw-bolder"
-          >The Congress API returns the following types of data:</span
-        >
-        <p>
-          <span class="fs-5 fw-bolder">Roll-call vote data:</span> Only
-          roll-call votes (not voice votes or division votes) are tracked by
-          official Congressional data sources. Along with basic vote data, the
-          ProPublica API returns additional information that is less readily
-          available, such as party totals. Votes are available from 1991 for the
-          House of Representatives and from 1989 for the Senate.
-        </p>
-        <p>
-          <span class="fs-5 fw-bolder">Member data:</span> Along with general
-          biographical information for current and past members of Congress, the
-          API returns data about members’ Congressional roles. Role data
-          includes the Congress number and chamber, as well as the member’s
-          title, state and party. A single member may have more than one role in
-          a particular Congress (for example, the member may switch parties or
-          move from the House to the Senate). The API also helps you compare
-          member data, including vote positions and bill cosponsorships. Member
-          data is available for every member who has served in Congress, but
-          those who have served more recently (since 1995) have more
-          information.
-        </p>
-        <p>
-          <span class="fs-5 fw-bolder">Personal explanations:</span> Statements
-          inserted into the Congressional Record explaining why lawmakers missed
-          votes and what their votes would have been (the statements are merely
-          explanations and have no effect on the vote itself).
-        </p>
-        <p>
-          <span class="fs-5 fw-bolder">Bill data:</span> Along with standard
-          bill summaries and details, the API returns bill subjects, amendments
-          and related bills. You can also retrieve bills by member, view all the
-          cosponsors of a bill, and search for bill subjects. Bill information
-          is available for bills from 1995 onward. Full-text search of bills is
-          also available.
-        </p>
-        <p>
-          <span class="fs-5 fw-bolder">Nomination data:</span> The API returns
-          presidential civilian nomination lists and details. Military
-          nominations are not included. For general information about
-          presidential nominations, see Congress.gov. Nomination data is
-          available from 2001 onward.
-        </p>
-        <p>
-          <span class="fs-5 fw-bolder">Floor actions:</span> Descriptions of
-          legislative activity that are updated in near real-time throughout the
-          day. This endpoint exists for both the House and the Senate.
-        </p>
-        <p>
-          <span class="fs-5 fw-bolder">Committee data:</span> The API returns
-          data about House and Senate committees, along with the memberships of
-          those committees.
-        </p>
-        <p>
-          <span class="fs-5 fw-bolder">Other data:</span> The API returns
-          various supplemental information, including party counts by state; and
-          committees and committee rosters.
-        </p>
-        <p>
-          Most of the data in the ProPublica Congress API is updated daily,
-          while votes are updated every 30 minutes.
-        </p>
-      </div>
-      <div class="d-flex flex-column justify-content-center w-50 p-3">
-        <img
-          src="https://www.telam.com.ar/advf/imagenes/2020/01/5e1ee9b7af2ca_1004x566.jpg"
-          class="img-thumbnail rounded float-end"
-          alt="..."
-        />
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <h1>House Attendance</h1>
+            <p>
+              The Constitution specifies that a majority of members constitutes
+              a quorum to do business in each house. Representatives and
+              senators rarely force the presence of a quorum by demanding quorum
+              calls; thus, in most cases, debates continue even if a majority is
+              not present. The Senate uses roll-call votes; a clerk calls out
+              the names of all the senators, each senator stating "aye" or "no"
+              when his or her name is announced. The House reserves roll-call
+              votes for the most formal matters, as a roll-call of all 435
+              representatives takes quite some time; normally, members vote by
+              electronic device. In the case of a tie, the motion in question
+              fails. In the Senate, the Vice President may (if present) cast the
+              tiebreaking vote.
+            </p>
+          </div>
+          <div class="col-6">
+            <h2>House at a glance</h2>
+            <div class="container-table-house container">
+              <table class="table table-dark table-hover table-sm mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-md-2">Party</th>
+                    <th scope="col" class="col-md-2">Number of Rep</th>
+                    <th scope="col" class="col-md-2">% Voted with Prty</th>
+                  </tr>
+                </thead>
+                <tbody id="tbodyAttendance">
+                  <tr id="trDemocrats">
+                    <th>Democrats</th>
+                  </tr>
+                  <tr id="trRepublicans">
+                    <th>Republicans</th>
+                  </tr>
+                  <tr id="trIndependents">
+                    <th>Independents</th>
+                  </tr>
+                  <tr id="trTotal">
+                    <th>Total</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h2>Least Engaged (Bottom 10% Attendance)</h2>
+            <div class="container-table-house container">
+              <table class="table table-dark table-hover table-sm mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-md-2">Name</th>
+                    <th scope="col" class="col-md-2">Number of Missed</th>
+                    <th scope="col" class="col-md-2">Votes % Missed</th>
+                  </tr>
+                </thead>
+                <tbody id="tbodyLeast"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-6">
+            <h2>Most Engaged (Top 10% Attendance)</h2>
+            <div class="container-table-house container">
+              <table class="table table-dark table-hover table-sm mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-md-2">Party</th>
+                    <th scope="col" class="col-md-2">Number of Rep</th>
+                    <th scope="col" class="col-md-2">% Voted with Prty</th>
+                  </tr>
+                </thead>
+                <tbody id="tbodyMost"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
-    <!-- Footer -->
-    <footer class="page-footer font-small bg-primary">
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">
-        © 2021 Data insight Group | All rights Reserved
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-    <!-- JS BOOTSTRAP -->
+    <script src="./data/houseCongressData.js"></script>
+    <script src="./js/Attendance.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
